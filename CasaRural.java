@@ -4,8 +4,8 @@ import java.io.InputStreamReader;
 
 public class CasaRural {
     private String codigo, poblacion, direccion;
-    private int numHabitacion;
-    private double precio;
+    private int numHabitacion = 0;
+    private double precio = 0.0;
     boolean esAlta;
 
     public CasaRural(){
