@@ -12,7 +12,7 @@ public class TablaDispersa {
             factorCarga = 0.0;
         }
     }
-/*
+
     public int direccion(String clave) {
         int i = 0, p;
         long d;
@@ -38,5 +38,34 @@ public class TablaDispersa {
             d = -d;
         return d;
     }
-    */
+
+    public void insertar(CasaRural r) {
+        int posicion;
+        posicion = direccion(r.getCodigo());
+        tabla[posicion] = r;
+        numElementos++;
+        factorCarga = (double) (numElementos) / TAMTABLA;
+        if (factorCarga > 0.5)
+            System.out.println("\n!! Factor de carga supera el 50%.!!"
+                    + " Conviene aumentar el tamaño.");
+    }
+
+    public CasaRural buscar(String clave) {
+        CasaRural pr;
+        int posicion;
+        posicion = direccion(clave);
+        pr = tabla[posicion];
+        if (pr != null)
+            if (!pr.esAlta)
+                pr = null;
+        return pr;
+    }
+
+    public void eliminar(String clave) {
+        int posicion;
+        posicion = direccion(clave);
+        if (tabla[posicion] != null)
+            tabla[posicion].esAlta = false;
+    }
+
 }
