@@ -25,7 +25,7 @@ public class CasaRural {
             System.out.println("\n Número de habitaciones: ");
             numHabitacion = Integer.parseInt(entrada.readLine());
             System.out.println("\n Precio por día de la estancia: ");
-            precio = (new Double(entrada.readLine())).doubleValue();   
+            precio = (Double.parseDouble(entrada.readLine()));
             
         } catch (IOException e) {
             System.out.println("Excepción en la entrada de datos: " + e.getMessage()

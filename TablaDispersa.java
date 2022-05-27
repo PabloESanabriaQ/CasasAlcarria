@@ -8,9 +8,9 @@ public class TablaDispersa {
         tabla = new CasaRural[TAMTABLA];
         for (int i = 0; i < TAMTABLA; i++) {
             tabla[i] = null;
-            numElementos = 0;
-            factorCarga = 0.0;
         }
+        numElementos = 0;
+        factorCarga = 0.0;
     }
 
     public int direccion(String clave) {
